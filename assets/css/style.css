@@ -1,0 +1,1119 @@
+body {
+  font-family: "Trip Sans", sans-serif;
+}
+.contener {
+  width: 1280px;
+  margin: 0 auto;
+}
+header {
+  display: flex;
+  height: 60px;
+}
+
+/* header left */
+.header-left {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+header img {
+  height: 40px;
+  margin-right: 5px;
+}
+.p1 {
+  color: rgb(19, 13, 13);
+  font-size: 27px;
+  margin-right: 20px;
+  font-weight: bold;
+}
+.search {
+  background-color: #fff;
+  width: 346px;
+  border: grey solid 2px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-left: 10px;
+}
+header input {
+  width: 95%;
+  height: 95%;
+  border: solid white 0px;
+  border-radius: 10px;
+  outline: none;
+}
+header input:hover {
+  border: black solid 0px;
+}
+.search i {
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/* header right */
+.header-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header-right div {
+  width: 96px;
+  margin-right: 15px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-right div,
+.header-left img {
+  cursor: pointer;
+}
+.header-right div p {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.header-right div:hover:not(i) {
+  border: black 2px solid;
+}
+.header-right i {
+  font-size: 25px;
+  /* font-weight: bold; */
+  margin-right: 3px;
+}
+.header-right button {
+  background-color: black;
+  width: 148px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  color: #fff;
+  border: none;
+}
+.header-right button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+/* modal */
+.modal-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 80;
+}
+.modal-box form {
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 40%;
+  box-sizing: border-box;
+  padding: 30px;
+  border-radius: 15px;
+  border: lightcoral 2px solid;
+}
+.modal-box form > * {
+  margin-bottom: 20px;
+}
+form h3 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+form input {
+  height: 40px;
+  width: 270px;
+  border: green solid 2px;
+  padding-left: 15px;
+}
+textarea {
+  height: 100px;
+  width: 270px;
+  border: green solid 2px;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+input[type="submit"] {
+  background-color: rgb(0, 196, 153);
+  width: 200px;
+  border: green solid 2px;
+  outline: none;
+}
+.modal-box button {
+  align-self: flex-end;
+  font-size: 15px;
+  width: 200px;
+  border: none;
+  outline: none;
+  color: red;
+  background-color: inherit;
+}
+.modal-box button:hover {
+  cursor: pointer;
+}
+
+/* main */
+/* explorer paris */
+.explorer {
+  height: 64px;
+  font-size: 54px;
+  color: #ff5d5d;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 30px;
+  font-weight: bold;
+}
+.explorer span {
+  color: black;
+  font-weight: bold;
+}
+/* nav */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  position: sticky;
+  top: 0px;
+  background-color: #fff;
+  z-index: 40;
+}
+nav div {
+  height: 62px;
+  width: 164px;
+  color: black;
+  border-radius: 10px;
+  border: black solid 1.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: 15px;
+}
+nav div:hover {
+  color: #fff;
+  background-color: black;
+  cursor: pointer;
+}
+nav div p {
+  font-size: 16px;
+  font-weight: bold;
+
+  /* margin-top: 15px;
+  margin-left: 23px; */
+
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+}
+nav i {
+  font-size: 25px;
+  /* margin-right: 10px;
+  margin-top: 10px; */
+  /* font-weight: bold; */
+}
+/* picture */
+.pic {
+  height: 430px;
+  margin-top: 27px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+}
+/* .pic img {
+  object-position: center;
+  object-fit: cover;
+} */
+.pic :nth-child(1) {
+  height: 430px;
+  width: 797px;
+  border-radius: 20px 0px 0px 20px;
+  object-fit: cover;
+  margin-right: 2px;
+}
+
+.pic :nth-child(2) {
+  height: 214px;
+  width: 480px;
+  border-radius: 0px 20px 0px 0px;
+}
+.pic :nth-child(3) {
+  height: 214px;
+  width: 480px;
+  border-radius: 0px 0px 20px 0px;
+}
+.pic :nth-child(4) {
+  background-color: black;
+  bottom: 20px;
+  position: absolute;
+  left: 20px;
+  width: 130px;
+  height: 32px;
+  color: #fff;
+  line-height: 14px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+}
+.pic *:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+/* legend */
+.legende {
+  display: flex;
+  height: 56px;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 14.4;
+}
+.legende span {
+  font-size: 12px;
+}
+.legende p {
+  font-size: 12px;
+}
+/* la ville lumiere */
+.la-ville {
+  margin-top: 16px;
+  height: 425px;
+  display: flex;
+  justify-content: space-between;
+}
+.ville-left {
+  display: flex;
+  flex-direction: column;
+  width: 640px;
+}
+
+.ville-left h3 {
+  font-size: 32px;
+  font-weight: bold;
+}
+.ville-left p {
+  font-size: 20px;
+  margin-top: 15px;
+  line-height: 24px;
+  font-family: Georgia, sans-serif;
+  color: #333333;
+}
+/* ville right */
+.ville-right {
+  width: 525px;
+  height: 425px;
+}
+.ville-right-top {
+  background-color: #ff5d5d;
+  height: 235px;
+  border-radius: 15px 15px 0px 0px;
+}
+.div-pad {
+  padding: 33px;
+  height: 169px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.div-pad h3 {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 500;
+}
+.div-pad p {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.creer-voyage p {
+  background-color: black;
+  width: 157px;
+  height: 55px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.creer-voyage p:hover {
+  cursor: pointer;
+}
+.ville-right-bottom img {
+  height: 190px;
+  width: 525px;
+  border-radius: 0px 0px 15px 15px;
+}
+
+/* conseil de .voyage */
+section {
+  margin-top: 77px;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.line {
+  flex: 1;
+  border: solid 1px black;
+}
+section p {
+  text-align: center;
+  margin: 0 15px;
+  font-size: 32px;
+  line-height: 38.4px;
+  font-weight: bold;
+}
+
+section img {
+  /* width: 210px; */
+  width: 17%;
+  height: 70px;
+  position: absolute;
+  /* left: 535px; */
+  left: 41.5%;
+  top: -65px;
+}
+
+.afficher {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  font-weight: bold;
+}
+.nav2 {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+.nav2 div {
+  height: 75px;
+  width: 304px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: lightgray solid 2px;
+  border-radius: 10px 10px 10px 10px;
+}
+.nav2 div:hover {
+  border: solid 2px black;
+  cursor: pointer;
+}
+.nav2 div :hover {
+  text-decoration: underline;
+}
+.nav2 p {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+.nav2 img {
+  width: 83px;
+}
+/* imanquable a paris */
+
+.contener1 {
+  margin-top: 37px;
+}
+
+.largeur {
+  display: flex;
+  justify-content: space-between;
+  /* height: 404px; */
+  margin-bottom: 85px;
+}
+.largeur-end {
+  display: flex;
+  justify-content: space-between;
+  /* height: 404px; */
+}
+.left2 {
+  height: 140px;
+  width: 285px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.left2 h3 {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 500;
+  color: #333333;
+}
+.left2 p {
+  font-size: 18px;
+  line-height: 21px;
+  font-family: Georgia, sans-serif;
+  color: #444444;
+}
+.left2 span {
+  font-size: 14px;
+  font-weight: bold;
+}
+/* right2 */
+.right2 {
+  width: 955px;
+  /* height: 404px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.contener3 {
+  margin-left: 8px;
+  /* height: 404px; */
+  width: 310px;
+  flex-shrink: 0;
+  position: relative;
+}
+.contener3:hover {
+  cursor: pointer;
+}
+.contener3:hover img {
+  opacity: 0.8;
+}
+.contener3:hover h3 {
+  text-decoration: underline;
+}
+
+.circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  right: 5px;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle i {
+  font-size: 25px;
+}
+.contener3 img {
+  height: 205px;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.reste > * {
+  margin-top: 4px;
+}
+.reste h3 {
+  font-size: 18px;
+  line-height: 21px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+.reste p {
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 5px;
+}
+.reste p + p {
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 6px;
+}
+/* guide de voyageur */
+.voyageur {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 143px;
+}
+
+.minipage {
+  background-color: #f9f1ec;
+  width: calc(100% / 3 - (94px / 3));
+  /* height: 535px; */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 394px;
+}
+.voyageur img {
+  width: 100%;
+  height: 223px;
+  object-fit: cover;
+}
+.minipage div {
+  padding: 25px;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.minipage h3 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  margin-top: 35px;
+}
+.minipage p {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+}
+.minipage span {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+}
+.minipage i {
+  color: red;
+  /* margin-bottom: 5px; */
+}
+.logo1 {
+  position: absolute;
+  top: 165px;
+  left: calc(43%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo1 img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+.logo1 span {
+  font-size: 16px;
+  margin-top: 5px;
+}
+/* dans les forums */
+
+.forum {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.forum > div {
+  background-color: #f9f1ec;
+  width: calc(100% / 3 - (40px / 2));
+  height: 200px;
+  border-radius: 10px;
+  padding: 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.forum h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.forum p {
+  display: flex;
+  align-items: center;
+}
+
+.forum img {
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.forum span {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 7px;
+}
+.forum em {
+  font-size: 16px;
+  font-weight: initial;
+}
+/* louer un logement pour votre prochaine escapade */
+.location {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  align-items: center;
+}
+.location p {
+  line-height: 33px;
+  font-size: 28px;
+}
+.location span {
+  font-size: 14px;
+  line-height: 14px;
+}
+/* .box {
+  overflow: hidden;
+  overflow-x: scroll;
+} */
+.caroussel {
+  margin-top: 10px;
+  height: 470px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.minipage2 {
+  display: flex;
+  flex-direction: column;
+  width: 415px;
+  margin-right: 17px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.minipage2-end {
+  /* background-color: crimson;
+  display: flex;
+  flex-direction: column; */
+  margin-right: 0px;
+}
+
+.minipage2 img {
+  width: 100%;
+  height: 314px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.minipage2 div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+.minipage2 div *:not(:first-child) {
+  margin-top: 5px;
+}
+.minipage2 h3 {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: bold;
+}
+.minipage2 p {
+  font-size: 16px;
+  line-height: 19px;
+}
+.minipage2 span {
+  font-size: 14px;
+  line-height: 16px;
+}
+.minipage2 em {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+}
+.minipage2 .circle {
+  margin-top: 0px;
+  padding-top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* paris est génial */
+.contener4 img {
+  object-fit: cover;
+}
+
+.largeur11 p {
+  font-size: 28px;
+  line-height: 33.6px;
+  width: 100%;
+  margin-top: 63px;
+}
+.contener-page {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 22px;
+}
+
+.minipage44 {
+  width: 245px;
+  position: relative;
+}
+.minipage44 > :nth-child(2) {
+  padding: 15px 0px;
+  box-sizing: border-box;
+}
+.minipage44 img {
+  height: 325px;
+  /* width: 245px; */
+  width: 100%;
+}
+.minipage44 h3 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 21.6px;
+}
+.minipage44 p {
+  font-size: 16px;
+  line-height: 19.2px;
+  background-color: inherit;
+  margin-top: inherit;
+  margin-bottom: 4px;
+}
+.minipage44 em {
+  font-size: 14px;
+  line-height: 16px;
+}
+.demi {
+  width: 310px;
+}
+.demi img {
+  width: 100%;
+}
+.minipage44 .circle {
+  top: 5px;
+}
+.hidden {
+  display: none;
+}
+.display {
+  display: flex;
+}
+/* site responsive */
+@media (max-width: 1327px) {
+  .contener {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  header {
+    width: 100%;
+  }
+  .header-left div {
+    width: 100%;
+    max-width: 346px;
+  }
+
+  /* nav */
+  nav .hidden {
+    display: inherit;
+  }
+
+  nav {
+    max-width: 1280px;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: inherit;
+  }
+  nav div {
+    /* max-width: 308px; */
+    min-width: calc(100% / 4 - (60px / 4));
+    height: inherit;
+    width: inherit;
+    /* height: 50px; */
+    /* flex-shrink: inherit; */
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  nav div p {
+    display: inline;
+    /* width: inherit; */
+  }
+  nav div:not(:nth-child(4n)) {
+    margin-right: 20px;
+  }
+  .pic {
+    width: 100%;
+  }
+  .pic :nth-child(1) {
+    /* width: 100px; */
+    max-width: 800px;
+    width: 64%;
+  }
+  .pic :nth-child(2) {
+    /* width: 100px; */
+    max-width: 480px;
+    width: 36%;
+  }
+  .pic :nth-child(3) {
+    /* width: 100%; */
+    max-width: 480px;
+    width: 36%;
+  }
+  /* conseil de voyage */
+  .nav2 {
+    flex-wrap: wrap;
+    justify-content: inherit;
+  }
+  .nav2 div {
+    margin-right: 20px;
+    flex: 1;
+    width: calc(50% - 20px);
+    min-width: 200px;
+    margin-top: 10px;
+  }
+  /* immanquable a paris */
+  .contener3 {
+    max-width: 310px;
+    width: 35%;
+  }
+
+  /*paris est génial pour */
+
+  .minipage44 {
+    width: 20%;
+    flex: 1;
+  }
+  .minipage44 img {
+    height: inherit;
+  }
+  .contener-page .minipage44:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .contener {
+    width: 100%;
+    padding: 0px 20px;
+    box-sizing: border-box;
+  }
+  header {
+    width: 100%;
+  }
+  .header-right div {
+    width: 100%;
+  }
+
+  .header-right div p {
+    display: none;
+    width: 100%;
+  }
+  header button {
+    flex-shrink: 0;
+  }
+  /* pic */
+
+  .pic {
+    height: 280px;
+  }
+  .pic :nth-child(1) {
+    height: 100%;
+  }
+  .pic :nth-child(2) {
+    height: 50%;
+  }
+  .pic :nth-child(3) {
+    height: 50%;
+  }
+  /* la ville */
+
+  .la-ville {
+    flex-direction: column;
+    height: inherit;
+  }
+  .ville-left {
+    width: 100%;
+  }
+  .ville-right {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    height: 100%;
+  }
+  .ville-right-top {
+    height: 277px;
+    border-radius: 15px 0px 0px 15px;
+    flex: 1;
+    max-width: 550px;
+    width: 100%;
+  }
+  .ville-right-bottom {
+    flex: 1;
+  }
+  .ville-right img {
+    height: 277px;
+    border-radius: 0px 15px 15px 0px;
+    flex: 1;
+    /* max-width: 525px; */
+    width: 100%;
+  }
+  /* conseil de voyage */
+
+  .nav2 div {
+    min-width: 40%;
+  }
+}
+@media (max-width: 923px) {
+  nav div:nth-child(1),
+  nav div:nth-child(2),
+  nav div:nth-child(3),
+  nav div:nth-child(4) {
+    height: 70px;
+  }
+  /* guide de voyage */
+  .logo1 {
+    left: 30%;
+  }
+}
+@media (max-width: 767px) {
+  .header-left {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0px 15px;
+  }
+  .header-left i {
+    display: inherit;
+    font-size: 25px;
+  }
+
+  .search {
+    display: none;
+  }
+  .header-right {
+    display: none;
+  }
+  .explorer p {
+    font-size: 32px;
+  }
+  /* nav */
+
+  nav {
+    overflow: hidden;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+  }
+  nav div {
+    flex-shrink: 0;
+    margin-right: 10px;
+    width: inherit;
+    min-width: 220px;
+    height: 50px;
+  }
+  nav div p {
+    margin-right: 10px;
+  }
+  /* pic */
+
+  .pic :nth-child(1) {
+    width: 100%;
+    border-radius: inherit;
+  }
+  .pic :nth-child(2) {
+    display: none;
+  }
+  .pic :nth-child(3) {
+    display: none;
+  }
+  .legende {
+    display: none;
+  }
+  /* la ville  */
+  .ville-right {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ville-right-top {
+    width: 100%;
+    max-width: inherit;
+    border-radius: 15px 15px 0px 0px;
+  }
+  .ville-right-bottom img {
+    border-radius: 0px 0px 15px 15px;
+  }
+  /* section */
+  section p {
+    font-size: 24px;
+  }
+  /* imanquable a paris */
+  .largeur {
+    flex-direction: column;
+  }
+  .right2 {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .right2 img {
+    height: 140px;
+  }
+  .largeur-end {
+    flex-direction: column;
+  }
+  /* dans les forums */
+  .forum {
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+  .forum > div {
+    width: 243px;
+  }
+  .forum div:not(:last-child) {
+    margin-right: 20px;
+  }
+  /* louer un logement pour votre prochaine escapade  */
+  .minipage2 {
+    width: 350px;
+  }
+  /* paris est génial pour */
+  .contener-page {
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+  .minipage44 {
+    width: 200px;
+    background-color: khaki;
+  }
+}
+@media (max-width: 614px) {
+  /* guide des voyageur */
+  .voyageur {
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+  .minipage {
+    width: 350px;
+    flex-shrink: 0;
+  }
+  .logo1 {
+    left: 42%;
+  }
+  .voyageur .minipage:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  /* dans les forums */
+
+  /* ne marche pas ==>
+
+  .section img {
+    top: 100px; 
+     position: inherit;
+    display: none;
+  } */
+}

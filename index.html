@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/font/transfonter.org-20201127-221743/stylesheet.css"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Tripadvisor</title>
+    <script src="./assets/js/main.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body class="contener">
+    <!-- modal -->
+    <div class="modal-box hidden">
+      <form id="contact">
+        <button id="close">fermer</button>
+        <h3>Formulaire d'inscription</h3>
+        <input type="text" placeholder="Prénom" id="first-name" value="ryan" />
+        <input type="text" placeholder="Nom" id="Name" value="lollia" />
+        <input
+          type="email"
+          placeholder="Email"
+          id="Email"
+          value="ryanlollia77@gmail.com"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          id="Password"
+          value="frbfhr"
+        />
+        <textarea name="" detail id="detail">
+Décrivez-vous en quelque ligne</textarea
+        >
+        <input type="submit" />
+      </form>
+    </div>
+    <header>
+      <div class="header-left">
+        <i class="icon-menu_bars hidden"></i>
+        <img
+          src="./assets/img/Tripadvisor_lockup_horizontal_secondary_registered.svg"
+          alt="logo-tripadvisor"
+        />
+
+        <div class="search">
+          <i class="icon-search"></i> <input type="text" />
+        </div>
+        <i class="icon-search hidden"></i>
+      </div>
+      <div class="header-right">
+        <div>
+          <i class="icon-plus_c"></i>
+          <p>Publier</p>
+        </div>
+        <div>
+          <i class="icon-notification_bell"></i>
+          <p>Alertes</p>
+        </div>
+        <div>
+          <i class="icon-heart"></i>
+          <p>Voyages</p>
+        </div>
+        <button id="button-header"><p>Connectez-vous</p></button>
+      </div>
+    </header>
+    <main>
+      <div class="explorer">
+        <p>Explorez <span>Paris</span></p>
+      </div>
+      <nav>
+        <div>
+          <p>Conseils de voyage</p>
+          <i class="icon-destination"></i>
+        </div>
+        <div>
+          <p>Hotels</p>
+          <i class="icon-hotels"></i>
+        </div>
+        <div>
+          <p>Locations de vacances</p>
+          <i class="icon-vacation_rentals"></i>
+        </div>
+        <div>
+          <p>Activités</p>
+          <i class="icon-attractions"></i>
+        </div>
+        <div>
+          <p>Restaurants</p>
+          <i class="icon-restaurants"></i>
+        </div>
+        <div>
+          <p>Forums de voyage</p>
+          <i class="icon-forums"></i>
+        </div>
+        <div class="hidden">
+          <p>Vols</p>
+          <i class="icon-more_horizontal"></i>
+        </div>
+        <div>
+          <p>Plus</p>
+          <i class="icon-more_horizontal"></i>
+        </div>
+      </nav>
+      <div class="pic">
+        <img src="./assets/img/image-batiment.jpg" alt="image-batiment" /><img
+          src="./assets/img/trip-moto.jpg"
+          alt="image-moto"
+        /><img src="./assets/img/trip-tour.jpg" alt="image-tour-effel" />
+        <div>Toutes les photos</div>
+      </div>
+      <div class="legende">
+        <p>Europe > France > Ile-de-France > Paris</p>
+        <span>Visiter : Paris</span>
+      </div>
+      <div class="la-ville">
+        <div class="ville-left">
+          <h3>La Ville Lumière éblouit en tous points</h3>
+          <p>
+            Aucun autre endroit au monde ne fait autant rêver que Paris. La
+            ville séduit par son art, son architecture, sa culture et sa
+            cuisine, mais il y a aussi des merveilles plus discrètes qui
+            n’attendent qu’à être explorées : les ruelles pavées pittoresques,
+            les pâtisseries au coin de la rue et les petits bistrots douillets
+            qui vous invitent à boire un verre de beaujolais. Préparez-vous à
+            vous approprier Paris.
+          </p>
+        </div>
+        <div class="ville-right">
+          <div class="ville-right-top">
+            <div class="div-pad">
+              <h3>Commencez à organiser Paris</h3>
+              <p>
+                Créez un voyage pour enregistrer et organiser toutes vos idées
+                et les visualiser sur une carte.
+              </p>
+              <div class="creer-voyage">
+                <p>Créez un voyage</p>
+              </div>
+            </div>
+          </div>
+          <div class="ville-right-bottom">
+            <img
+              src="./assets/img/image_trips_card_medium.png"
+              alt="image-map"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- conseille de voyage  -->
+      <section>
+        <div class="line"></div>
+        <p>Conseils de voyage</p>
+        <div class="line"></div>
+      </section>
+      <div class="afficher">
+        <p>Tout afficher</p>
+      </div>
+      <div class="nav2">
+        <div>
+          <p>
+            <img
+              src="./assets/img/meilleur-periode-visiter.svg"
+              alt="logo-periode"
+            />
+            Meilleur période pour visiter
+          </p>
+        </div>
+        <div>
+          <p>
+            <img src="./assets/img/se-deplacer.svg" alt="logo-pied" /> Se
+            déplacer
+          </p>
+        </div>
+        <div>
+          <p>
+            <img src="./assets/img/coutume-locale.svg" alt="logo-verre" />
+            Coutumes locales
+          </p>
+        </div>
+        <div>
+          <p>
+            <img src="./assets/img/conseil-de-pro.svg" alt="logo-ampoule" />
+            Conseils de pro
+          </p>
+        </div>
+      </div>
+
+      <!-- imanquable a paris  -->
+      <section>
+        <div class="line"></div>
+        <p>Immanquable à Paris</p>
+        <div class="line"></div>
+      </section>
+      <div class="contener1">
+        <div class="largeur">
+          <div class="left2">
+            <h3>Se divertir</h3>
+            <p>
+              Des lieux à voir, des rues à explorer et des expériences
+              emblématiques à Paris.
+            </p>
+            <span>Tout afficher</span>
+          </div>
+          <div class="right2">
+            <!-- un div -->
+            <div class="contener3">
+              <img src="./assets/img/eiffeltoren.jpg" alt="tour-effeil" />
+              <div class="reste">
+                <h3>Tour Eiffel</h3>
+                <p>- - - - - - - - 140 247 avis</p>
+                <p>
+                  Tours et plateformes d'observation, Monuments & Points
+                  d'intérêt
+                </p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <div class="contener3">
+              <img src="./assets/img/louvre.jpg" alt="louvre" />
+              <div class="reste">
+                <h3>Musée du Louvre</h3>
+                <p>- - - - - - - - 100 872 avis</p>
+                <p>Bâtiments architecturaux, Musées d'art</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <div class="contener3">
+              <img
+                src="./assets/img/arc-de-triomphe-at-night.jpg"
+                alt="arc-de-trionphe"
+              />
+              <div class="reste">
+                <h3>Arc de Triomphe</h3>
+                <p>- - - - - - - - 45 095 avis</p>
+                <p>Bâtiments architecturaux, Sites historiques</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <div class="contener3">
+              <img src="./assets/img/rodin.jpg" alt="musée-rodin" />
+              <div class="reste">
+                <h3>Musée Rodin</h3>
+                <p>- - - - - - - - 12 453 avis</p>
+                <p>Musées spécialisés</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <div class="contener3">
+              <img src="./assets/img/catedral.jpg" alt="cadedral-notre-dame" />
+              <div class="reste">
+                <h3>Cathédrale Notre-Dame de Paris</h3>
+                <p>- - - - - - - - 71 254 avis</p>
+                <p>Bâtiments architecturaux, Sites historiques</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <div class="contener3">
+              <img
+                src="./assets/img/sheakspear.jpg"
+                alt="boutique-de-cheakspeare"
+              />
+              <div class="reste">
+                <h3>Librairie Shakespeare and Company</h3>
+                <p>- - - - - - - - 3 921 avis</p>
+                <p>Bibliothèques, Grands magasins</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <div class="contener3">
+              <img src="./assets/img/orsey.jpg" alt="musée-orsay" />
+              <div class="reste">
+                <h3>Musée d'Orsay</h3>
+                <p>- - - - - - - - 65 764 avis</p>
+                <p>Musées d'art</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <div class="contener3">
+              <img
+                src="./assets/img/marche-vernaison-maison.jpg"
+                alt="marché-de-saint-ouen"
+              />
+              <div class="reste">
+                <h3>Marché aux Puces de Saint-Ouen</h3>
+                <p>- - - - - - - - 864 avis</p>
+                <p>
+                  Antiquaires,Marchés aux puces & Marchés de rue <br />À 5,4
+                  kilomètres de Paris Saint-Ouen,France
+                </p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <div class="contener3">
+              <img
+                src="./assets/img/basilica-del-sagrado.jpg"
+                alt="basilique-du-sacrer-coeur"
+              />
+              <div class="reste">
+                <h3>Basilique du Sacré-Coeur de Montmarte</h3>
+                <p>- - - - - - - - 38 623 avis</p>
+                <p>Église et cathédrales</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <div class="contener3">
+              <img
+                src="./assets/img/jardin-des-tuileries.jpg"
+                alt="jardin-des-tuilerie"
+              />
+              <div class="reste">
+                <h3>Jardin des Tuileries</h3>
+                <p>- - - - - - - - 7 521 avis</p>
+                <p>Jardins</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="largeur">
+          <div class="left2">
+            <h3>Se reposer</h3>
+            <p>Un mélange de charme, de symboles et de modernité.</p>
+            <span>Tout afficher</span>
+          </div>
+          <div class="right2">
+            <!-- un div -->
+            <div class="contener3">
+              <img src="./assets/img/bristol.jpg" alt="le-bristol" />
+              <div class="reste">
+                <h3>Le Bristol Paris</h3>
+                <p>- - - - - - - - 2 074 avis</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <!-- un div -->
+            <div class="contener3">
+              <img
+                src="./assets/img/hotel-and-spa.jpg"
+                alt="La Reserve paris"
+              />
+              <div class="reste">
+                <h3>La Réserce Paris - Hotel and Spa</h3>
+                <p>- - - - - - - - 475 avis</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <!-- un div -->
+            <div class="contener3">
+              <img
+                src="./assets/img/four-saison-hotel.jpg"
+                alt="Four-Seasons-hotel"
+              />
+              <div class="reste">
+                <h3>Four Seasons Hotel George V</h3>
+                <p>- - - - - - - - 3 063 avis</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <!-- un div -->
+            <div class="contener3">
+              <img src="./assets/img/hotel-crillon.jpg" alt="rosewood hotel" />
+              <div class="reste">
+                <h3>Hôtel de Crillon,A Rosewood Hotel</h3>
+                <p>- - - - - - - - 498 avis</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <!-- un div -->
+            <div class="contener3">
+              <img src="./assets/img/le-meurice.jpg" alt="le-meurice" />
+              <div class="reste">
+                <h3>Le Meurice</h3>
+                <p>- - - - - - - - 1 348 avis</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <!-- un div -->
+            <div class="contener3">
+              <img
+                src="./assets/img/hotel-des-grands-boulevards.jpg"
+                alt="hotel-des-grand-boulevars"
+              />
+              <div class="reste">
+                <h3>Hotel des Grands Boulevards</h3>
+                <p>- - - - - - - - 213 avis</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <!-- un div -->
+            <div class="contener3">
+              <img src="./assets/img/the-hoxton-paris.jpg" alt="the-hoxton" />
+              <div class="reste">
+                <h3>The Hoxton, Paris</h3>
+                <p>- - - - - - - - 906 avis</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <!-- un div -->
+            <div class="contener3">
+              <img
+                src="./assets/img/hotel-henriette.jpg"
+                alt="hotel-henriette"
+              />
+              <div class="reste">
+                <h3>Hôtel Henriette</h3>
+                <p>- - - - - - - - 1 126 avis</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <!-- un div -->
+            <div class="contener3">
+              <img src="./assets/img/hiden-hotel.jpg" alt="hidden-hotel" />
+              <div class="reste">
+                <h3>Hidden Hotel</h3>
+                <p>- - - - - - - - 1 504 avis</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <!-- un div -->
+            <div class="contener3">
+              <img
+                src="./assets/img/hotel-signature-st-germain.jpg"
+                alt="hotel germain"
+              />
+              <div class="reste">
+                <h3>Hôtel Signature Saint Germain des Près</h3>
+                <p>- - - - - - - - 1 631 avis</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="largeur-end">
+          <div class="left2">
+            <h3>Se restaurer</h3>
+            <p>Bistrots et bars typiques, et plus encore à Paris.</p>
+            <span>Tout afficher</span>
+          </div>
+          <div class="right2">
+            <!-- un div -->
+            <div class="contener3">
+              <img src="./assets/img/verjus.jpg" alt="le-verjus" />
+              <div class="reste">
+                <h3>Verjus</h3>
+                <p>- - - - - - - - 572 avis</p>
+                <p>€€€€.Francaise, Européenne, Moderne</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <!-- un div -->
+            <div class="contener3">
+              <img src="./assets/img/114-faubourg.jpg" alt="le-114-faubourg" />
+              <div class="reste">
+                <h3>Le 114 Faubourg</h3>
+                <p>- - - - - - - - 1 756 avis</p>
+                <p>€€€€.Francaise, Européenne, Végétariens bienvenus</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <!-- un div -->
+            <div class="contener3">
+              <img src="./assets/img/frenchi.jpg" alt="le-franchie" />
+              <div class="reste">
+                <h3>Frenchie</h3>
+                <p>- - - - - - - - 1 296 avis</p>
+                <p>€€€€.Francaise, Végétariens bienvenus, Plats sans gluten</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <!-- un div -->
+            <div class="contener3">
+              <img
+                src="./assets/img/table-de-colette.jpg"
+                alt="la-table-de-colette"
+              />
+              <div class="reste">
+                <h3>La Table de Colette</h3>
+                <p>- - - - - - - - 250 avis</p>
+                <p>€€€€.Francaise, Européenne, Saine</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <!-- un div -->
+            <div class="contener3">
+              <img src="./assets/img/aspic-paris-maquereau.jpg" alt="ASPIC" />
+              <div class="reste">
+                <h3>ASPIC</h3>
+                <p>- - - - - - - - 980 avis</p>
+                <p>€€€€.Francaise, Européenne, Moderne</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <!-- un div -->
+            <div class="contener3">
+              <img
+                src="./assets/img/terrasse-de-gigi.jpg"
+                alt="creperie-gigi"
+              />
+              <div class="reste">
+                <h3>Crêperie Gigi</h3>
+                <p>- - - - - - - - 225 avis</p>
+                <p>€€ €€€.Francaise, Européenne, Végétariens bienvenus</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <!-- un div -->
+            <div class="contener3">
+              <img src="./assets/img/juvenil.jpg" alt="juveniles-wine-bar" />
+              <div class="reste">
+                <h3>Juveniles Wine Bar</h3>
+                <p>- - - - - - - - 396 avis</p>
+                <p>€€ €€€.Francaise, Européenne, Bar à vins</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <!-- un div -->
+            <div class="contener3">
+              <img src="./assets/img/le-barav.jpg" alt="le-barav" />
+              <div class="reste">
+                <h3>Le Barav</h3>
+                <p>- - - - - - - - 291 avis</p>
+                <p>€€ €€€.Francaise, Bar à vins</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <!-- un div -->
+            <div class="contener3">
+              <img src="./assets/img/pedzouille.jpg" alt="le-pedzouille" />
+              <div class="reste">
+                <h3>Pedzouille</h3>
+                <p>- - - - - - - - 456 avis</p>
+                <p>€€ €€€.Francaise, Européenne</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+            <!-- un div -->
+            <div class="contener3">
+              <img src="./assets/img/rigmarole.jpg" alt="le-rigmarole" />
+              <div class="reste">
+                <h3>Le Rigmarole</h3>
+                <p>- - - - - - - - 31 avis</p>
+                <p>€€ €€€.Francaise, Japonaise, Internationale</p>
+                <div class="circle"><i class="icon-heart"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- guide de voyageur -->
+
+      <section>
+        <div class="line"></div>
+        <p>Guides de voyageurs</p>
+        <div class="line"></div>
+      </section>
+      <div>
+        <div class="voyageur">
+          <div class="minipage">
+            <img src="./assets/img/piece-peintre.jpg" alt="piece-peintre" />
+            <div>
+              <h3>Best summer things to do in Paris | Eatwith</h3>
+              <p>
+                Eatwith host Elodie is a private tour guide in Paris, offering
+                all sorts of tours for small groups, from fashion to food. She's
+                been...
+              </p>
+              <span
+                ><i class="icon-heart"></i><br />
+                3 articles</span
+              >
+            </div>
+            <span class="logo1">
+              <img
+                src="./assets/img/eatwith-restauration.jpg"
+                alt="logo-restauration"
+              />
+              <span>Par Eatwith</span>
+            </span>
+          </div>
+
+          <div class="minipage">
+            <img src="./assets/img/topito-squelette.jpg" alt="squelette" />
+            <div>
+              <h3>10 musées méconnus de Paris pour changer du Louvre</h3>
+              <p>
+                Avec : Musée Fragonard, Musée Zadkine, Musée Cernuschi, Musée
+                Nissim de Camondo, Musée de la vie romantique,...
+              </p>
+              <span><i class="icon-heart"></i><br />10 articles</span>
+            </div>
+            <span class="logo1">
+              <img src="./assets/img/topito-com.jpg" alt="logo-topito" />
+              <span>Par Topico</span>
+            </span>
+          </div>
+          <div class="minipage">
+            <img src="./assets/img/topito-crane.jpg" alt="crane" />
+            <div>
+              <h3>Top 10 des choses à faire ou à voir dans le 14ème</h3>
+              <p>
+                Avec : Les Catacombes De Paris, Parc Montsouris, Le Tournesol
+                cafe, Fondation Cartier pour l'art contemporain, Gare ...
+              </p>
+              <span><i class="icon-heart"></i><br />10 articles</span>
+            </div>
+            <span class="logo1">
+              <img src="./assets/img/topito-com.jpg" alt="logo-topito" />
+              <span>Par Topico</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!-- dans les forums -->
+      <section>
+        <div class="line"></div>
+        <p>Dans les forums</p>
+        <div class="line"></div>
+        <img src="./assets/img/forums.svg" alt="image-forum" />
+      </section>
+      <div class="afficher">
+        <p>Tout afficher</p>
+      </div>
+      <div class="forum">
+        <div>
+          <h3>Conseils 3 jours a Paris en famille oct 2020</h3>
+          <p>
+            <img
+              src="./assets/img/image-montagne.jpg"
+              alt="image-montagne"
+            /><span>Par Elise M .<em> 5 réponses</em> </span> 
+          </p>
+        </div>
+        <div>
+          <h3>Départ vers tahiti</h3>
+          <p>
+            <img
+              src="./assets/img/image-montagne-russe.jpg"
+              alt="image-montagne-russe"
+            /><span>Par Piritua A .<em> 2 réponses</em> </span>
+          </p>
+        </div>
+        <div>
+          <h3>Billet électronique en pdf</h3>
+          <p>
+            <img
+              src="./assets/img/image-bateaux.jpg"
+              alt="image-bateaux"
+            /><span>Par Ibrahima S .<em> 1 réponses</em> </span>
+          </p>
+        </div>
+      </div>
+        <!-- louer un logement pour votre prochaine escapade -->
+      </div>
+      <section>
+        <div class="line"></div>
+        <p>Louez un logement pour votre prochaine escapade</p>
+        <div class="line"></div>
+      </section>
+      <div class="location">
+        <p>Locations populaires à Paris</p>
+        <span>Tout afficher</span>
+      </div>
+      <div class="caroussel">
+        <div class="minipage2">
+          <img src="./assets/img/car-monmartre.jpg" alt="photo-imeuble" />
+          <div>
+            <h3>Montmartre Beautiful Apartment In A Secret Garden</h3>
+            <p>- - - - - 151 avis</p>
+            <span>3 couchages . 1 chambre . 1 salle de bain</span>
+            <em>à partir de 212€/nuit</em>
+            <div class="circle"><i class="icon-heart"></i></div>
+          </div>
+        </div>
+        <!-- un div  -->
+        <div class="minipage2">
+          <img src="./assets/img/car-cozy-canal.jpg" alt="photo-piece" />
+          <div>
+            <h3>Cozy Canal Saint Martin Studio (333)</h3>
+            <p>- - - - - 17 avis</p>
+            <span>2 couchages . 1 salle de bain</span>
+            <em>à partir de 94€/nuit</em>
+            <div class="circle"><i class="icon-heart"></i></div>
+          </div>
+        </div>
+        <!-- un div  -->
+        <div class="minipage2">
+          <img src="./assets/img/car-latin-quateur.jpg" alt="photo-piece" />
+          <div>
+            <h3>Large 2 Bedroom Latin Quarter (338)</h3>
+            <p>- - - - - 2 avis</p>
+            <span>6 couchages . 2 chambre . 2 salle de bain</span>
+            <em>à partir de 337€/nuit</em>
+            <div class="circle"><i class="icon-heart"></i></div>
+          </div>
+        </div>
+        <div class="minipage2">
+          <img src="./assets/img/car-git-gb-luxe.jpg" alt="photo-maison" />
+          <div>
+            <h3>
+              Gite gd luxe 1h30 Paris piscine intérieure sauna,fête acceptées cf
+              conditions.
+            </h3>
+            <p>- - - - - 19 avis</p>
+            <span>15 couchages . 3 chambres . 7 salle de bain</span>
+            <em>à partir de 1060€/nuit</em>
+            <div class="circle"><i class="icon-heart"></i></div>
+          </div>
+        </div>
+        <div class="minipage2">
+          <img
+            src="./assets/img/car-studio-piscine-paris.jpg"
+            alt="photos-studio-piscine"
+          />
+          <div>
+            <h3>Studio Piscine à Paris Montmartre Tout Confort</h3>
+            <p>- - - - - 15 avis</p>
+            <span>3 couchages . 1 salle de bain</span>
+            <em>à partir de 74€/nuit</em>
+            <div class="circle"><i class="icon-heart"></i></div>
+          </div>
+        </div>
+        <!-- un div  -->
+        <div class="minipage2">
+          <img
+            src="./assets/img/car-le-jardin-du-marais.jpg"
+            alt="photos-studio-piscine"
+          />
+          <div>
+            <h3>Le Jardin Du Marais</h3>
+            <p>- - - - - 37 avis</p>
+            <span>4 couchages . 1 chambre . 1 salle de bain</span>
+            <em>à partir de 125€/nuit</em>
+            <div class="circle"><i class="icon-heart"></i></div>
+          </div>
+        </div>
+        <!-- un div  -->
+        <div class="minipage2">
+          <img
+            src="./assets/img/car-a-studio-with-terrasse.jpg"
+            alt="photo-piece-appartement"
+          />
+          <div>
+            <h3>A Studio with Terrace - Notre Dame de Paris</h3>
+            <p>- - - - - 36 avis</p>
+            <span>2 couchages . 1 chambre . 1 salle de bain</span>
+            <em>à partir de 150€/nuit</em>
+            <div class="circle"><i class="icon-heart"></i></div>
+          </div>
+        </div>
+        <div class="minipage2">
+          <img
+            src="./assets/img/car-beautiful-latin-quater1.jpg"
+            alt="photo-piece-appartement"
+          />
+          <div>
+            <h3>Beautiful Latin Quarter 1 Bedroom (197)</h3>
+            <p>- - - - - 3 avis</p>
+            <span>2 couchages . 1 chambre . 2 salle de bain</span>
+            <em>à partir de 182€/nuit</em>
+            <div class="circle"><i class="icon-heart"></i></div>
+          </div>
+        </div>
+        <div class="minipage2">
+          <img
+            src="./assets/img/car-a-little-nearby-bedroom.jpg"
+            alt="
+            photo-piece-appartement"
+          />
+          <div>
+            <h3>
+              A LITTLE HOUSE NEARBY EIFFEL TOWER - TYPICAL PARISIAN STREET
+            </h3>
+            <p>- - - - - 13 avis</p>
+            <span>5 couchages . 1 chambre . 1 salle de bain</span>
+            <em>à partir de 127€/nuit</em>
+            <div class="circle"><i class="icon-heart"></i></div>
+          </div>
+        </div>
+      </div>
+      <!-- paris est génial  -->
+      <section>
+        <div class="line"></div>
+        <p>Paris est génial pour</p>
+        <div class="line"></div>
+      </section>
+      <div class="contener4">
+        <div class="largeur11">
+          <p>Food halls, épiceries et marchés de rue pour les gastronomes</p>
+          <div class="contener-page">
+            <div class="minipage44">
+              <img
+                src="./assets/img/food-rue-montorgueil.jpg"
+                alt="food-rue-montorgueil"
+              />
+              <div>
+                <h3>Rue Montorgueil</h3>
+                <p>- - - - - - 716 avis</p>
+                <em>Monuments & Points d'intérêt</em>
+              </div>
+              <div class="circle"><i class="icon-heart"></i></div>
+            </div>
+            <!-- un div -->
+            <div class="minipage44">
+              <img
+                src="./assets/img/food-marcher-daligre.jpg"
+                alt="marché-daligre"
+              />
+              <div>
+                <h3>Marché d'aligre</h3>
+                <p>- - - - - - 383 avis</p>
+                <em>Marché aux puces & Marchés de rue, Marchés fermiers</em>
+              </div>
+              <div class="circle"><i class="icon-heart"></i></div>
+            </div>
+            <!-- un div -->
+            <div class="minipage44">
+              <img
+                src="./assets/img/food-marche-des-enfants-rouges.jpg"
+                alt="food-marche-des-enfants-rouges"
+              />
+              <div>
+                <h3>Marche des Enfants Rouges</h3>
+                <p>- - - - - - 1014 avis</p>
+                <em>Marchés aux puces & Marchés de rue, Marchés fermiers</em>
+              </div>
+              <div class="circle"><i class="icon-heart"></i></div>
+            </div>
+            <!-- un div -->
+            <div class="minipage44">
+              <img
+                src="./assets/img/food-la-grande-epicerie-de-paris.jpg"
+                alt="photo-la-grande-epicerie-de-paris"
+              />
+              <div>
+                <h3>La Grande Épicerie de Paris</h3>
+                <p>- - - - - - 883 avis</p>
+                <em
+                  >Boutiques de souvenirs & Magasins spécialisés, Marchés
+                  fermiers</em
+                >
+              </div>
+              <div class="circle"><i class="icon-heart"></i></div>
+            </div>
+            <!-- un div -->
+            <div class="minipage44">
+              <img src="./assets/img/food-rue-cler.jpg" alt="rue-cler" />
+              <div>
+                <h3>Rue Cler</h3>
+                <p>- - - - - - 717 avis</p>
+                <em
+                  >Marchés aux puces & Marchés de rue, Monuments & Points
+                  d'intérêt</em
+                >
+              </div>
+              <div class="circle"><i class="icon-heart"></i></div>
+            </div>
+          </div>
+        </div>
+        <!-- autre largeur 2 -->
+        <div class="largeur11">
+          <p>Parfaites pâtisseries parisiennes</p>
+          <div class="contener-page">
+            <div class="minipage44 demi">
+              <img
+                src="./assets/img/pat-boulangerie-poilane.jpg"
+                alt="image-vitrine-boulangerie"
+              />
+              <div>
+                <h3>Boulangerie Poilâne</h3>
+                <p>- - - - - - 156 avis</p>
+                <em
+                  >Boutiques de souvenirs & Magasins spécialisés, Boutiques de
+                  nourriture et boissons
+                </em>
+              </div>
+              <div class="circle"><i class="icon-heart"></i></div>
+            </div>
+            <!-- un div -->
+            <div class="minipage44 demi">
+              <img
+                src="./assets/img/pat-du-pain-et-des-idees.jpg"
+                alt="image-patisserie"
+              />
+              <div>
+                <h3>Du Pain et des Idées</h3>
+                <p>- - - - - - 909 avis</p>
+                <em
+                  >€ . Boulangeries-pâtisseries, Française, Végétariens
+                  bienvenus</em
+                >
+              </div>
+              <div class="circle"><i class="icon-heart"></i></div>
+            </div>
+
+            <!-- un div -->
+            <div class="minipage44 demi">
+              <img
+                src="./assets/img/pat-la-patisserie-cyril-lignac.jpg"
+                alt="image-vitrine-boulangerie"
+              />
+              <div>
+                <h3>La Pâtisserie Cyril Lignac</h3>
+                <p>- - - - - - 249 avis</p>
+                <em>€€ - €€€ . Boulangeries-pâtisseries, Française</em>
+              </div>
+              <div class="circle"><i class="icon-heart"></i></div>
+            </div>
+            <!-- un div -->
+            <div class="minipage44 demi">
+              <img
+                src="./assets/img/pat-angelina-paris.jpg"
+                alt="image-vitrine-boulangerie"
+              />
+              <div>
+                <h3>Angelina Paris</h3>
+                <p>- - - - - - 10 696 avis</p>
+                <em>€€ - €€€ . Française, Végétariens bienvenus</em>
+              </div>
+              <div class="circle"><i class="icon-heart"></i></div>
+            </div>
+          </div>
+        </div>
+        <!-- autre largeur 3 -->
+        <div class="largeur11">
+          <p>Splendides espaces verts</p>
+          <div class="contener-page">
+            <div class="minipage44">
+              <img
+                src="./assets/img/spl-jardin-des-tuileries (1).jpg"
+                alt="jardin-tuilerie"
+              />
+              <div>
+                <h3>Jardin des Tuileries</h3>
+                <p>- - - - - - 7 521 avis</p>
+                <em>Jardins</em>
+              </div>
+              <div class="circle"><i class="icon-heart"></i></div>
+            </div>
+            <!-- un div -->
+            <div class="minipage44">
+              <img
+                src="./assets/img/spl-le-pont-des-buttes-chaumont.jpg"
+                alt="parc"
+              />
+              <div>
+                <h3>Parc des Buttes-Chaumont</h3>
+                <p>- - - - - - 2 058 avis</p>
+                <em>Parcs</em>
+              </div>
+              <div class="circle"><i class="icon-heart"></i></div>
+            </div>
+            <!-- un div -->
+            <div class="minipage44">
+              <img
+                src="./assets/img/spl-places-des-vosgues.jpg"
+                alt="place-des-vosges"
+              />
+              <div>
+                <h3>Place des Vosges</h3>
+                <p>- - - - - - 5 664 avis</p>
+                <em>Monuments & Points d'intérêt</em>
+              </div>
+              <div class="circle"><i class="icon-heart"></i></div>
+            </div>
+            <!-- un div -->
+            <div class="minipage44">
+              <img src="./assets/img/spl-parc-monceau.jpg" alt="parc" />
+              <div>
+                <h3>Parc Monceau</h3>
+                <p>- - - - - - 1 020 avis</p>
+                <em>Parcs</em>
+              </div>
+              <div class="circle"><i class="icon-heart"></i></div>
+            </div>
+            <!-- un div -->
+            <div class="minipage44">
+              <img
+                src="./assets/img/spl-coulee-verte-rene-dumont.jpg"
+                alt="chemin-avec-des-plante"
+              />
+              <div>
+                <h3>Coulée Verte René-Dumont</h3>
+                <p>- - - - - - 894 avis</p>
+                <em>Jardins, Parcs</em>
+              </div>
+              <div class="circle"><i class="icon-heart"></i></div>
+            </div>
+          </div>
+        </div>
+        <!-- div largeur 4 -->
+        <div class="largeur11">
+          <p>Bars à cocktails pour les soirées</p>
+          <div class="contener-page">
+            <div class="minipage44 demi">
+              <img
+                src="./assets/img/bar-little-red-door.jpg"
+                alt="porte-little-red-door"
+              />
+              <div>
+                <h3>Little Red Door</h3>
+                <p>- - - - - - 367 avis</p>
+                <em>€€ - €€€</em>
+              </div>
+              <div class="circle"><i class="icon-heart"></i></div>
+            </div>
+            <!-- un div -->
+            <div class="minipage44 demi">
+              <img src="./assets/img/bar-lulu-white.jpg" alt="musicien" />
+              <div>
+                <h3>Lulu White</h3>
+                <p>- - - - - - 81 avis</p>
+                <em>Bar et clubs, Bars de jazz</em>
+              </div>
+              <div class="circle"><i class="icon-heart"></i></div>
+            </div>
+
+            <!-- un div -->
+            <div class="minipage44 demi">
+              <img
+                src="./assets/img/bar-bar-hemingway.jpg"
+                alt="piece-de-restaurent"
+              />
+              <div>
+                <h3>Bar Hermingway</h3>
+                <p>- - - - - - 267 avis</p>
+                <em>Bars et clubs</em>
+              </div>
+              <div class="circle"><i class="icon-heart"></i></div>
+            </div>
+            <!-- un div -->
+            <div class="minipage44 demi">
+              <img
+                src="./assets/img/bar-candelaria.jpg"
+                alt="serveur-sert-un-verre"
+              />
+              <div>
+                <h3>Candelaria</h3>
+                <p>- - - - - - 537 avis</p>
+                <em>€€ - €€€ . Mexicaine, Latino, Amérique centrale</em>
+              </div>
+              <div class="circle"><i class="icon-heart"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height: 100px"><hr /></div>
+    </main>
+  </body>
+</html>
